@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box; /*Makes layouts easier and more predictable. Ensures elements don’t grow unexpectedly when you add padding or borders.*/
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #153677, #4e058f);
+  padding: 10px;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background: white;
+  margin: 100px auto 20px;
+  padding: 40px 30px 65px;
+  border-radius: 10px;
+}
+
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 20px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+.row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 14px; /*Controls the thickness (boldness) of the characters.*/
+}
+
+.row button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: #fff;
+  border-radius: 40px;
+  font-size: 16px; /*Controls how big or small the text appears on the screen.*/
+  cursor: pointer;
+}
+
+ul li {
+  list-style: none;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 17px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+ul li::before {
+  /*It lets you insert virtual content before each <li> element, without adding extra HTML.*/
+  content: " "; /*The content property is required when using ::before or ::after */
+  position: absolute;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  background-image: url(./images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px; /*This is not margin or padding. Since you set position: absolute,  Place the pseudo-element 12px down from the top of its nearest positioned ancestor*/
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(./images/checked.png);
+}
+
+ul li span{
+position: absolute;
+right:0;
+top:10px;
+width: 40px;
+height: 40px;
+font-size: 22px;
+text-align: center;
+color:#555;
+border-radius: 50%;
+line-height: 40px;
+}
+
+ul li span:hover{
+    background: #edeef0;
+    cursor: pointer;
+}
+
+
