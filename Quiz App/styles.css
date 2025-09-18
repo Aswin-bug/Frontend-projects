@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background: #001e4d;
+}
+
+.app {
+  width: 90%; /*element takes 90% of its parent container’s width, no matter how wide it gets (unless overridden by max-width or min-width).*/
+  max-width: 500px; /*Sets the maximum allowed width.  Even if width makes it larger, it will never exceed this value.*/
+  background: white;
+  margin: 100px auto 0;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.app h1 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #001e4d;
+  border-bottom: solid 2px black;
+  padding-bottom: 30px;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #001e4d;
+}
+
+.btn {
+  background: white;
+  color: #222;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  text-align: left;
+  border-radius: 4px;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative; /*all means any change (background, border, transform, etc.) will animate smoothly in 0.3s.*/
+}
+
+.btn:hover:not([disabled]) {
+  /*makes sure the style is applied only if the button is NOT disabled.*/
+  background: #222;
+  color: white;
+}
+
+.btn:disabled {
+  /*This targets any button with the disabled attribute.*/
+  cursor: no-drop; /*changes the mouse pointer to 🚫 */
+}
+
+#next-btn {
+  background: #001e4d;
+  color: white;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+
+.correct {
+  background: #9aeabc;
+}
+
+.incorrect {
+  background: #ff9393;
+}
