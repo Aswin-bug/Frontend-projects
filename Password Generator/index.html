@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="icon" type="image/png" href="./images/secure-password.png">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate a<br> <span>Random Password</span></h1>
+        <div class="display">
+            <input type="text" id="password" placeholder="Password">
+            <img src="./images/copy.png" onclick="copyPassword()">
+        </div>
+        <button onclick="generatePassword()"><img src="./images/generate.png">Generate Password</button>
+    </div>
+</body>
+<script>
+
+    const passwordBox = document.getElementById("password");
+    const length = 15;
+
+    const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    const numbers = "1234567890";
+    const symbol = "!@#$%^&*()<>?{}-=+_~`";
+
+    const allCharacters = upperCase + lowerCase + numbers + symbol;
+
+    function generatePassword() {
+        let password = "";
+        password += upperCase[Math.floor(Math.random() * upperCase.length)];
+        password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+        password += numbers[Math.floor(Math.random() * numbers.length)];
+        password += symbol[Math.floor(Math.random() * symbol.length)];  //till this step might be 4 or 5 charcaters will be included from all of them, to continue further and reach till the desired point we need loop
+
+        while (length > password.length) {
+            password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
+        }
+        passwordBox.value = password;
+    }
+
+    function copyPassword() {
+        passwordBox.select();
+        document.execCommand("copy");
+    }
+
+
+</script>
+
+</html>
