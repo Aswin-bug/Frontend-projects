@@ -1,43 +1,50 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins' ,sans-serif;
-    box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: 'Poppins', sans-serif;
+ box-sizing: border-box;   
 }
 
 body{
-    background: #002339;
-    color: #fff;
+    background-color: #003366;
+    color:#fff;
 }
 
 .container{
-    margin-left: 15%;
-    margin-top: 15%;
-    width: 90%;
-    max-width: 700px;
-}
-
-.display{
-    width: 100%;
-    background: white;
-    margin-top: 30px;
-    padding: 3% 3%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 5px;
+    color: white;
+    margin: 15%;
 }
 
 .container h1{
-    font-weight: 500;
     font-size: 45px;
-    margin-bottom: 5%;
+    font-weight: 500;
 }
 
 .container h1 span{
-    color: #019f55;
-    border-bottom: 4px solid #019f55;
-    padding-bottom: 7px;
+    color: #008000 ;
+     font-size: 50px;
+    font-weight: 500;
+    border-bottom: 5px solid #008000;
+    padding-bottom: 5px;
+}
+
+.display {
+    width: 70%;
+    background: white;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 1%;
+    border-radius: 5px;
+   
+}
+
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+    font-weight: 400;
 }
 
 .display img{
@@ -45,30 +52,26 @@ body{
     cursor: pointer;
 }
 
-.display input{
-    border: 0;
-    outline: 0;
-    font-size: 24px;
-}
-
 .container button img{
-    width: 28px;
-    margin-right: 10px;
+ width:28px;
+ margin-right: 20px;
+ /* margin-top: 10px; */
 }
 
 .container button{
+    width: 28%;
+    margin-top: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 25px;
+    font-weight: 400;
     border: 0;
     outline: 0;
-    color: #fff;
-    background-color: #019f55;
-    font-size: 22px;
-    font-weight: 300;
-    margin-top: 3%;
     display: flex;
     align-items: center;
-    justify-content:center;
-    padding: 10px 20px;
+    justify-content: center;
     border-radius: 5px;
+    background-color: #008000;
+    color: #fff;
     cursor: pointer;
 }
-
