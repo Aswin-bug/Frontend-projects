@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(238, 130, 238, 0.313), rgba(0, 0, 255, 0.514));
+  color: white;
+  padding-top: 4%;
+  padding-left: 10%;
+}
+
+.container h1 {
+  display: flex;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.container h1 img {
+  width: 60px;
+}
+
+.container button img {
+  width: 25px;
+  margin-right: 8px;
+}
+
+.container button {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(#9418fd, #571094);
+  color: white;
+  border: 0;
+  outline: 0;
+  padding: 10px 15px;
+  margin: 10px 15px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.input-box {
+  position: relative; /*The element with position: relative is usually the parent (or ancestor) that acts as the reference box for the absolutely positioned child.*/
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  background-color: white;
+  color: #333;
+  padding: 20px;  /*set the same value to all sides*/
+  margin: 20px 0;
+  outline: 0;
+  border-radius: 5px;
+}
+
+.input-box img{ 
+    width: 25px;
+    position: absolute; /*When you give a child position: absolute, the browser looks up the DOM tree until it finds the nearest ancestor that has position: relative | absolute | fixed | sticky*/
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
