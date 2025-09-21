@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4203a9, #90bafc);
+  color: white;
+  padding: 10px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 600px;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.calculator h1 {
+  font-size: 60px;
+}
+
+.calculator span {
+  color: yellow;
+}
+
+.input-box {
+  margin: 40px 0;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-box input {
+  position: relative;
+  flex: 1;
+  margin-right: 20px;
+  padding: 15px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.input-box button {
+  background: yellow;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+}
+
+.input-box input::-webkit-calendar-picker-indicator {  /*will display the date when we click anywhere inside the input box*/
+    position: absolute;
+    right: 10px;   /* keep it aligned to the right */
+    top: 50%;
+    transform: translateY(-50%); /* vertically center */
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#result{
+    font-size: 22px;
+}
+
+#result span{
+    color: yellow;
+}
+
