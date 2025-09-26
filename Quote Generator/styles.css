@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PlayFair Display", serif;
+}
+
+body {
+  background: #bbc6fa;
+}
+
+.quote-box {
+  background-color: white;
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /*shifts it back half of its own width and height to perfectly center it , without this the box will be pushed towards right*/
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.quote-box h2::after {
+  /*creates a virtual element that comes after the content of <h2> but inside it*/
+  position: absolute;
+  content: ""; /*meaning no text, just a block/shape*/
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background: rgb(23, 124, 229);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%); /*to center it*/
+}
+
+.quote-box blockquote {
+  font-size: 26px;
+  min-height: 110px;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+}
+
+.quote-box span {
+  display: block; /*behave like a block element (can take width, height, etc.)*/
+  float: right;
+  margin-top: 10px;
+  position: relative; /*makes the <span> the positioning reference (parent) for its absolutely positioned child (::before).*/
+}
+
+.quote-box span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: rgb(23, 124, 229);
+  position: absolute; /*places this line relative to the <span> its parent*/
+  left: -40%;
+  top: 50%;
+}
+
+.quote-box div {
+  width: 100%; /*to cosnume the entire space so the buttons can be centered*/
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/*
+Flexbox (1D) → use justify-content + align-items
+Grid (2D) → can use all four (justify-content, align-content, justify-items, align-items).
+*/
+.quote-box button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;  /*Controls how multiple items are distributed along the main axis. axis changes on row,column by flex-direction   row-main axis(horizontal) column-main axis is vertical*/
+  align-items: center; /*Controls how items are aligned on the cross-axis -vertical*/
+  background: rgb(23, 124, 229);
+  color: white;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  margin: 5px;  /*to provide gap between two buttons*/
+  cursor: pointer;
+
+}
+
+.quote-box button img{
+    width: 30px;
+    margin-right: 10px;
+}
+
+.quote-box button:nth-child(2){
+    background: transparent;
+    color: #333;
+}
